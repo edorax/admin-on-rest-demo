@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import withWidth from 'material-ui/utils/withWidth';
-import { AppBarMobile, GET_LIST, GET_MANY } from 'admin-on-rest';
+// import { AppBarMobile, GET_LIST, GET_MANY } from 'admin-on-rest';
 
 import Welcome from './Welcome';
-import MonthlyRevenue from './MonthlyRevenue';
-import NbNewOrders from './NbNewOrders';
-import PendingOrders from './PendingOrders';
-import PendingReviews from './PendingReviews';
-import NewCustomers from './NewCustomers';
-import restClient from '../restClient';
+// import MonthlyRevenue from './MonthlyRevenue';
+// import NbNewOrders from './NbNewOrders';
+// import PendingOrders from './PendingOrders';
+// import PendingReviews from './PendingReviews';
+// import NewCustomers from './NewCustomers';
+// import restClient from '../restClient';
 
 const styles = {
     welcome: { marginBottom: '2em' },
@@ -22,6 +22,7 @@ class Dashboard extends Component {
     state = {};
 
     componentDidMount() {
+		/*
         const d = new Date();
         d.setDate(d.getDate() - 30);
         restClient(GET_LIST, 'commands', {
@@ -95,9 +96,11 @@ class Dashboard extends Component {
                 this.setState({ newCustomers });
                 this.setState({ nbNewCustomers: newCustomers.reduce(nb => ++nb, 0) })
             })
+		*/
     }
 
     render() {
+		/*
         const {
             nbNewCustomers,
             nbNewOrders,
@@ -110,10 +113,14 @@ class Dashboard extends Component {
             revenue,
         } = this.state;
         const { width } = this.props;
+		*/
         return (
             <div>
+				{/*
                 {width === 1 && <AppBarMobile title="Posters Galore Admin" />}
+				*/}
                 <Welcome style={styles.welcome} />
+				{/*
                 <div style={styles.flex}>
                     <div style={styles.leftCol}>
                         <div style={styles.flex}>
@@ -131,6 +138,7 @@ class Dashboard extends Component {
                         </div>
                     </div>
                 </div>
+				*/}
             </div>
         );
     }

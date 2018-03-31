@@ -1,16 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import compose from 'recompose/compose';
-import SettingsIcon from 'material-ui/svg-icons/action/settings';
-import LabelIcon from 'material-ui/svg-icons/action/label';
-import { translate, DashboardMenuItem, MenuItemLink } from 'admin-on-rest';
+// import SettingsIcon from 'material-ui/svg-icons/action/settings';
+// import LabelIcon from 'material-ui/svg-icons/action/label';
+import { translate, DashboardMenuItem, /* MenuItemLink */ } from 'admin-on-rest';
 
+/*/
 import { VisitorIcon } from './visitors';
 import { CommandIcon } from './commands';
 import { ProductIcon } from './products';
 import { CategoryIcon } from './categories';
 import { ReviewIcon } from './reviews';
+*/
 
+/*
 const items = [
     { name: 'customers', icon: <VisitorIcon /> },
     { name: 'segments', icon: <LabelIcon /> },
@@ -19,6 +22,7 @@ const items = [
     { name: 'categories', icon: <CategoryIcon /> },
     { name: 'reviews', icon: <ReviewIcon /> },
 ];
+*/
 
 const styles = {
     main: {
@@ -32,7 +36,7 @@ const styles = {
 const Menu = ({ onMenuTap, translate, logout }) => (
     <div style={styles.main}>
         <DashboardMenuItem onClick={onMenuTap} />
-        {items.map(item => (
+        {/*items.map(item => (
             <MenuItemLink
                 key={item.name}
                 to={`/${item.name}`}
@@ -40,13 +44,15 @@ const Menu = ({ onMenuTap, translate, logout }) => (
                 leftIcon={item.icon}
                 onClick={onMenuTap}
             />
-        ))}
+        ))*/}
+		{/*
         <MenuItemLink
             to="/configuration"
             primaryText={translate('pos.configuration')}
             leftIcon={<SettingsIcon />}
             onClick={onMenuTap}
         />
+		*/}
         {logout}
     </div>
 );
